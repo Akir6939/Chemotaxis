@@ -1,8 +1,9 @@
 Bacteria[] bactArr = new Bacteria[800];
-int snowPile=0;   
+float snowPile=0;   
  void setup()   
  {   
- 	//frameRate(25);
+ 	fill(255);
+ 	stroke(255);
  	size(500,500);  
  	background(122);
  	for(int i = 0;i<bactArr.length;i++)
@@ -11,18 +12,16 @@ int snowPile=0;
  void draw()   
  {   
  	background(122);
- 	fill(255);
- 	stroke(255); 
+ 	rect(0,500,500,snowPile); 
  	for(int j = 0;j<bactArr.length;j++){
  		bactArr[j].move();
  		bactArr[j].show();
  		bactArr[j].reset();
- 		rect(0,500,500,snowPile);
  	}   
  }  
  class Bacteria    
  {     
- 	int x,y,r,g,b;
+ 	int x,y;
  	public Bacteria(){
  		x = (int)(Math.random()*500);
  		y = (int)(Math.random()*500)-10;
@@ -41,6 +40,4 @@ int snowPile=0;
  			snowPile++;
  		}
  	}
- }
-
-    
+ }    
