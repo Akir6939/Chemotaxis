@@ -1,4 +1,4 @@
-Bacteria[] bactArr = new Bacteria[800];
+Snowflake[] bactArr = new Snowflake[700];
 float snowPile=0;   
  void setup()   
  {   
@@ -7,7 +7,7 @@ float snowPile=0;
  	size(500,500);  
  	background(122);
  	for(int i = 0;i<bactArr.length;i++)
- 		bactArr[i]=new Bacteria();   
+ 		bactArr[i]=new Snowflake();   
  }
  void mousePressed(){
  	snowPile=0;
@@ -15,17 +15,17 @@ float snowPile=0;
  void draw()   
  {   
  	background(122);
- 	rect(0,500-snowPile,500,snowPile);
  	for(int j = 0;j<bactArr.length;j++){
  		bactArr[j].move();
  		bactArr[j].show();
  		bactArr[j].reset();
- 	}   
+ 	}
+ 	rect(0,500-snowPile,500,snowPile);   
  }  
- class Bacteria    
+ class Snowflake    
  {     
  	int x,y;
- 	public Bacteria(){
+ 	public Snowflake(){
  		x = (int)(Math.random()*500);
  		y = (int)(Math.random()*500)-10;
  	}
@@ -40,7 +40,7 @@ float snowPile=0;
  		if(y>=500){
  			x = (int)(Math.random()*500);
  			y=0;
- 			snowPile+=.1;
+ 			snowPile+=.125;
  		}
  	}
  }    
