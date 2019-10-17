@@ -8,11 +8,14 @@ float snowPile=0;
  	background(122);
  	for(int i = 0;i<bactArr.length;i++)
  		bactArr[i]=new Bacteria();   
+ }
+ void mousePressed(){
+ 	snowPile=0;
  }   
  void draw()   
  {   
  	background(122);
- 	rect(0,500,500,snowPile); 
+ 	rect(0,500-snowPile,500,snowPile);
  	for(int j = 0;j<bactArr.length;j++){
  		bactArr[j].move();
  		bactArr[j].show();
@@ -37,7 +40,7 @@ float snowPile=0;
  		if(y>=500){
  			x = (int)(Math.random()*500);
  			y=0;
- 			snowPile++;
+ 			snowPile+=.1;
  		}
  	}
  }    
