@@ -2,8 +2,8 @@ Snowflake[] bactArr = new Snowflake[700];
 float snowPile=0;   
  void setup()   
  {   
- 	fill(255);
- 	stroke(255);
+ 	fill(255,255,255);
+ 	stroke(255,255,255);
  	size(500,500);  
  	background(122);
  	for(int i = 0;i<bactArr.length;i++)
